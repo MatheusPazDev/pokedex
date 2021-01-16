@@ -1,8 +1,14 @@
 import Link from "next/Link";
 import Layout from "../components/Layout";
+
 export default function Home({ pokemon }) {
   return (
     <Layout title="NextJS Pokedex">
+      <p className="mb-10 text-center">
+        <Link href="/contador">
+          <a className="text-2xl underline">Contador</a>
+        </Link>
+      </p>
       <h1 className="text-4xl mb-8 text-center ">The Nextjs Pokedex</h1>
       <ul>
         {pokemon.map((pokeman, index) => (
